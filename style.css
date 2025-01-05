@@ -11,18 +11,17 @@ header {
 
 header h1 {
   font-size: 1.9rem;
-  margin: 20px 0 20px;
+  margin: 20px 0;
 }
 
-/* Description under the title */
 #impact-description {
   margin: 20px auto;
-  padding: 0 20px; /* Add padding on left and right */
-  max-width: 1200px; /* Limit the text width for readability */
-  font-size: 1.2rem; /* Slightly larger than regular text */
-  line-height: 1.6; /* Add spacing between lines for better readability */
-  text-align: center; /* Center-align the text */
-  color: #333; /* Dark gray for better contrast */
+  padding: 0 20px;
+  max-width: 1200px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #333;
 }
 
 #unit-toggle {
@@ -44,22 +43,19 @@ header h1 {
   color: white;
 }
 
-/* Main Container */
 #container {
   display: flex;
   justify-content: space-between;
   padding: 20px;
 }
 
-/* Animal Selector */
 #animal-list {
   flex: 1;
 }
 
 #animal-list h2 {
   text-align: center;
-  margin-top: 1px; /* Decrease space above */
-  margin-bottom: 20px; /* Add space below */
+  margin: 1px 0 20px;
   font-size: 1.5rem;
 }
 
@@ -83,7 +79,6 @@ header h1 {
   transform: scale(1.1);
 }
 
-/* Animal Details */
 #animal-details {
   flex: 1;
 }
@@ -91,15 +86,13 @@ header h1 {
 #animal-details h2 {
   text-align: center;
   font-size: 1.5rem;
-  margin-top: 1px; /* Decrease space above */
-  margin-bottom: 20px; /* Add space below */
+  margin: 1px 0 20px;
 }
 
 #stats {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  justify-content: center;
 }
 
 .stat-row {
@@ -111,28 +104,22 @@ header h1 {
 .icon {
   width: 60px;
   height: 60px;
-  border-radius: 15px; 
+  border-radius: 15px;
 }
 
 .stat-box {
-  width: auto;
-  height: 50px; 
   padding: 10px;
   border-radius: 15px;
   background-color: #ffffff;
   color: #333;
-  text-align: left; 
+  text-align: left;
   font-weight: bold;
   font-size: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-
-  /* Flexbox to center vertically */
   display: flex;
-  align-items: center; /* Vertically centers the content */
-  justify-content: flex-start; /* Ensures the text is aligned to the left */
+  align-items: center;
 }
 
-/* Kill Counter Section */
 #kill-counter {
   text-align: center;
   margin: 50px auto;
@@ -145,7 +132,6 @@ header h1 {
   color: #000;
 }
 
-/* Kill Counter Grid */
 .kill-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -170,49 +156,46 @@ header h1 {
   margin-bottom: 10px;
 }
 
-/* Sources Section */
 .sources-container {
-  display: flex; /* Use flexbox to align items on the same line */
-  align-items: center; /* Vertically align text */
-  justify-content: center; /* Center the content horizontally */
-  gap: 10px; /* Add spacing between "Sources" and the link */
-  margin-top: 20px; /* Add spacing from the section above */
-  margin-bottom: 70px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto 70px;
 }
 
 .sources-container h3 {
-  margin: 0; /* Remove extra margin from the heading */
-  font-size: 1.1rem; /* Match the paragraph font size */
-  color: #555; /* Subtle gray */
+  margin: 0;
+  font-size: 1.1rem;
+  color: #555;
 }
 
 .sources-container ul {
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove padding */
-  list-style-type: none; /* Remove bullets */
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .sources-container ul li {
-  display: inline; /* Align link inline with heading */
+  display: inline;
 }
 
 .sources-container ul li a {
-  text-decoration: none; /* Remove underline */
-  color: #0077cc; /* Blue link color */
+  text-decoration: none;
+  color: #0077cc;
 }
 
 .sources-container ul li a:hover {
-  text-decoration: underline; /* Add underline on hover */
+  text-decoration: underline;
 }
 
 #time-counter {
   text-align: center;
   margin: 20px auto;
-  font-size: 1.2rem; /* Match the font size of the paragraph */
-  color: #333; /* Same color as the paragraph */
+  font-size: 1.2rem;
+  color: #333;
 }
 
-/* General Styling */
 #lifestyle-description {
   margin: 20px auto;
   padding: 0 20px;
@@ -223,7 +206,6 @@ header h1 {
   color: #333;
 }
 
-/* Calculator Controls */
 #main-container {
   display: flex;
   justify-content: space-between;
@@ -241,7 +223,6 @@ header h1 {
   gap: 20px;
 }
 
-/* Vegan/Vegetarian and Metric/Imperial Buttons */
 .toggle-buttons,
 .unit-toggle {
   display: flex;
@@ -264,22 +245,13 @@ button.active {
   color: white;
 }
 
-/* Input Section */
 .input-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.input-fields .input-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
 label {
-  display: block;
   font-size: 1.2rem;
   margin-bottom: 5px;
   font-weight: bold;
@@ -287,19 +259,16 @@ label {
 
 input {
   width: 200px;
-  height: 90px;
-  padding: 15px 20px;
-  font-size: 1.5rem;
-  font-weight: bold;
+  height: 40px;
+  padding: 10px;
+  font-size: 1.2rem;
   border-radius: 15px;
   border: none;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
   color: #333;
   text-align: center;
 }
 
-/* Output Section */
 .output-stats {
   display: flex;
   flex-direction: column;
@@ -310,14 +279,12 @@ input {
   padding: 15px 20px;
   font-size: 1.2rem;
   font-weight: bold;
-  color: #333;
   text-align: center;
   border-radius: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Additional Styling for Responsiveness */
 @media screen and (max-width: 768px) {
   #main-container {
     flex-direction: column;
@@ -330,40 +297,34 @@ input {
     width: 100%;
     align-items: center;
   }
-
-  .toggle-buttons,
-  .unit-toggle {
-    justify-content: center;
-  }
 }
 
-/* Sources Container Styling */
 .sources-container-simple {
-  padding: 0 20px; /* Add horizontal padding to move the sources away from screen borders */
-  margin: 20px auto; /* Center-align the sources container and add spacing above and below */
-  max-width: 800px; /* Restrict the maximum width to align with content */
-  text-align: left; /* Ensure text is aligned to the left */
+  padding: 0 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: left;
 }
 
 .sources-container-simple h3 {
-  display: inline; /* Keep "Sources:" inline with the sources text */
+  display: inline;
   font-size: 1.2rem;
   color: #333;
-  margin-right: 5px; /* Add space between "Sources:" and the sources list */
+  margin-right: 5px;
 }
 
 .sources-container-simple p {
-  display: inline; /* Keep sources text inline */
+  display: inline;
   font-size: 1rem;
   color: #555;
-  line-height: 1.6; /* Improve readability */
+  line-height: 1.6;
 }
 
 .sources-container-simple a {
   text-decoration: none;
-  color: #0077cc; /* Standard blue link color */
+  color: #0077cc;
 }
 
 .sources-container-simple a:hover {
-  text-decoration: underline; /* Underline links on hover */
+  text-decoration: underline;
 }
