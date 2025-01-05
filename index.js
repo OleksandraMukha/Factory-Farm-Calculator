@@ -1,13 +1,12 @@
-let currentData = []; // Store the currently selected dataset (metric or imperial)
-let currentAnimal = ""; // Track the currently selected animal
-let isMetric = true; // Default to Metric
+let currentData = [];
+let currentAnimal = "";
+let isMetric = true;
 
-// Load CSV Data
 function loadCSV(filePath, callback) {
   fetch(filePath)
     .then((response) => response.text())
     .then((data) => {
-      const rows = data.split("\n").slice(1); // Skip header row
+      const rows = data.split("\n").slice(1);
       const parsedData = rows.map((row) => {
         const columns = row.split(",");
         return {
@@ -25,24 +24,20 @@ function loadCSV(filePath, callback) {
     .catch((error) => console.error("Error loading CSV:", error));
 }
 
-// Load metric and imperial data
 function loadData() {
   const filePath = isMetric ? "data/stats_metric.csv" : "data/stats_imperial.csv";
   loadCSV(filePath, (data) => {
     currentData = data;
     console.log(`${isMetric ? "Metric" : "Imperial"} Data Loaded:`, currentData);
 
-    // Update the displayed statistics if an animal is selected
     if (currentAnimal) {
       updateStats(currentAnimal);
     } else {
-      // Set default values instead of clearing the stats
       setDefaultStats();
     }
   });
 }
 
-// Set Default Stats
 function setDefaultStats() {
   document.getElementById("land-text").textContent = "Land used";
   document.getElementById("water-text").textContent = "Water used";
@@ -52,7 +47,6 @@ function setDefaultStats() {
   document.getElementById("slaughter-text").textContent = "Animals slaughtered";
 }
 
-// Update statistics for selected animal
 function updateStats(animal) {
   const stats = currentData.find((row) => row.animal.toLowerCase() === animal.toLowerCase());
 
@@ -68,23 +62,21 @@ function updateStats(animal) {
   }
 }
 
-// Add event listeners to animal images
 document.querySelectorAll(".animal-images img").forEach((img) => {
   img.addEventListener("click", () => {
-    const animalName = img.alt; // Get the alt attribute of the clicked image
-    currentAnimal = img.dataset.animal; // Store the selected animal
-    document.getElementById("animal-title").textContent = animalName; // Update the title
-    updateStats(currentAnimal); // Update the statistics
+    const animalName = img.alt;
+    currentAnimal = img.dataset.animal;
+    document.getElementById("animal-title").textContent = animalName;
+    updateStats(currentAnimal);
   });
 });
 
-// Add event listeners to unit toggle buttons
 document.getElementById("metric").addEventListener("click", () => {
   if (!isMetric) {
     isMetric = true;
     document.getElementById("metric").classList.add("active");
     document.getElementById("imperial").classList.remove("active");
-    loadData(); // Reload the metric data
+    loadData();
   }
 });
 
@@ -93,38 +85,32 @@ document.getElementById("imperial").addEventListener("click", () => {
     isMetric = false;
     document.getElementById("imperial").classList.add("active");
     document.getElementById("metric").classList.remove("active");
-    loadData(); // Reload the imperial data
+    loadData();
   }
 });
 
-// Initial Load
 loadData();
 
-// Countdown Timer
 window.addEventListener('DOMContentLoaded', function () {
   let startTime = new Date().getTime();
 
   function updateTime() {
     const currentTime = new Date().getTime();
-    const elapsedTime = Math.floor((currentTime - startTime) / 1000); // Seconds since page load
+    const elapsedTime = Math.floor((currentTime - startTime) / 1000);
 
-    const minutes = Math.floor(elapsedTime / 60); // Calculate minutes
-    const seconds = elapsedTime % 60; // Calculate remaining seconds
+    const minutes = Math.floor(elapsedTime / 60);
+    const seconds = elapsedTime % 60;
 
-    // Construct the time string
     let timeString = `${seconds} second${seconds !== 1 ? 's' : ''}`;
     if (minutes > 0) {
       timeString = `${minutes} minute${minutes !== 1 ? 's' : ''} and ` + timeString;
     }
 
-    // Update the time-elapsed element
     document.getElementById('time-elapsed').textContent = timeString;
   }
 
-  // Update the time every second
   setInterval(updateTime, 1000);
 });
-
 
 window.addEventListener('DOMContentLoaded', function () {
   var updatesPerSecond = 20;
@@ -190,9 +176,7 @@ const factors = {
 let isMetricCalc = true;
 let currentType = "vegan";
 
-// Initialize the page with default values
 document.addEventListener("DOMContentLoaded", () => {
-  // Set default output values
   document.querySelector("#saves-animals").textContent = "0 Animal Lives";
   document.querySelector("#saves-water").textContent = isMetricCalc
     ? "0 Liters of Water"
@@ -227,7 +211,6 @@ document.querySelectorAll(".toggle-buttons button").forEach((btn) =>
   })
 );
 
-// Add input event listeners to days, months, and years fields
 ["#days", "#months", "#years"].forEach((id) => {
   document.querySelector(id).addEventListener("input", updateCalculator);
 });
@@ -260,7 +243,6 @@ function updateCalculator() {
       years * factors[currentType].yearly.co2,
   };
 
-  
   document.querySelector("#saves-animals").textContent = `${Math.round(total.animals)} Animal Lives`;
   document.querySelector("#saves-water").textContent = isMetricCalc
     ? `${Math.round(total.water)} Liters of Water`
