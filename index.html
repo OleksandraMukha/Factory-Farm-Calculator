@@ -7,11 +7,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header> 
+  <header>
     <h1>Factory Farm Impact Calculator</h1>
     <div id="impact-description">
-      Industrial animal agriculture is one of the leading contributors to climate change, responsible for at least <strong>11 percent</strong> of global greenhouse gas emissions (World Animal Protection). That’s nearly as much as the entire global transportation sector. <br>
-      We often worry about the climate footprint of the planet’s <strong>7.8 billion</strong> people but overlook the environmental consequences of sustaining more than <strong>70 billion</strong> farm land animals each year (New Roots Institute).
+      Industrial animal agriculture contributes significantly to climate change, responsible for 11% of global greenhouse gas emissions. That’s almost as much as the entire global transportation sector. Sustaining over 70 billion farm animals annually has enormous environmental consequences.
     </div>
     <div id="unit-toggle">
       <button id="metric" class="active">Metric</button>
@@ -21,7 +20,6 @@
 
   <main>
     <div id="container">
-      <!-- Left Section: Animal Selector -->
       <section id="animal-list">
         <div id="center-title">
           <h2 id="animal-title">Select an Animal</h2>
@@ -38,7 +36,6 @@
         </div>
       </section>
 
-      <!-- Right Section: Statistics -->
       <section id="animal-details">
         <h2>Facts & Statistics:</h2>
         <div id="stats">
@@ -69,115 +66,67 @@
         </div>
       </section>
     </div>
-    <div class="sources-container-simple">
-      <h3>Sources:</h3>
+
+    <section id="kill-counter">
+      <h2>Animals killed for food since opening this page</h2>
+      <section id="time-counter">
+        <p>Time since opening this page: <span id="time-elapsed">0 seconds</span></p>
+      </section>
+      <div class="kill-grid">
+        <div class="kill-item"><span id="akc-wild_caught_fish">0</span> Wild Caught Fish</div>
+        <div class="kill-item"><span id="akc-chickens">0</span> Chickens</div>
+        <div class="kill-item"><span id="akc-farmed_fish">0</span> Farmed Fish</div>
+        <div class="kill-item"><span id="akc-ducks">0</span> Ducks</div>
+        <div class="kill-item"><span id="akc-pigs">0</span> Pigs</div>
+        <div class="kill-item"><span id="akc-rabbits">0</span> Rabbits</div>
+        <div class="kill-item"><span id="akc-geese">0</span> Geese</div>
+        <div class="kill-item"><span id="akc-turkeys">0</span> Turkeys</div>
+        <div class="kill-item"><span id="akc-sheep">0</span> Sheep</div>
+        <div class="kill-item"><span id="akc-goats">0</span> Goats</div>
+        <div class="kill-item"><span id="akc-cattle">0</span> Cattle</div>
+        <div class="kill-item"><span id="akc-rodents">0</span> Rodents</div>
+        <div class="kill-item"><span id="akc-other_birds">0</span> Pigeons & Birds</div>
+        <div class="kill-item"><span id="akc-buffalo">0</span> Buffaloes</div>
+        <div class="kill-item"><span id="akc-horses">0</span> Horses</div>
+        <div class="kill-item"><span id="akc-donkeys">0</span> Donkeys</div>
+      </div>
+    </section>
+
+    <section id="lifestyle-calculator">
+      <h2>Calculate Your Saves on a Vegan Lifestyle</h2>
       <p>
-        <a href="https://ourworldindata.org/land-use" target="_blank">Land Use - Our World in Data</a>,
-        <a href="https://www.waterfootprint.org/" target="_blank">Water Footprint Of Food List</a>,
-        <a href="https://www.feedconversions.org/" target="_blank">Feed Conversion Ratio Calculator</a>,
-        <a href="https://en.wikipedia.org/wiki/Feed_conversion_ratio" target="_blank">Feed Conversion Ratio - Wikipedia</a>,
-        <a href="https://ourworldindata.org/environmental-impacts-of-food" target="_blank">Food Product GHG Emissions per Kilogram Worldwide</a>,
-        <a href="https://www.swissveg.ch/life_expectancy" target="_blank">Life Expectancy vs. Lifespan - Swissveg</a>,
-        <a href="https://80000hours.org/problem-profiles/factory-farming/" target="_blank">Factory Farming - 80,000 Hours</a>.
+        A vegan or vegetarian lifestyle conserves water, grain, and land, reduces CO₂ emissions, and spares countless animals from harm.
       </p>
-    </div>
-     
-
-    <!-- Move Counter Section Here -->
-<section id="kill-counter">
-  <h2>Animals killed for food since opening this page</h2>
-  <section id="time-counter">
-    <p>Time since opening this page: <span id="time-elapsed">0 seconds</span></p>
-  </section>
-  <div class="kill-grid">
-    <div class="kill-item"><span id="akc-wild_caught_fish">0</span> Wild Caught Fish</div>
-    <div class="kill-item"><span id="akc-chickens">0</span> Chickens</div>
-    <div class="kill-item"><span id="akc-farmed_fish">0</span> Farmed Fish</div>
-    <div class="kill-item"><span id="akc-ducks">0</span> Ducks</div>
-    <div class="kill-item"><span id="akc-pigs">0</span> Pigs</div>
-    <div class="kill-item"><span id="akc-rabbits">0</span> Rabbits</div>
-    <div class="kill-item"><span id="akc-geese">0</span> Geese</div>
-    <div class="kill-item"><span id="akc-turkeys">0</span> Turkeys</div>
-    <div class="kill-item"><span id="akc-sheep">0</span> Sheep</div>
-    <div class="kill-item"><span id="akc-goats">0</span> Goats</div>
-    <div class="kill-item"><span id="akc-cattle">0</span> Cattle</div>
-    <div class="kill-item"><span id="akc-rodents">0</span> Rodents</div>
-    <div class="kill-item"><span id="akc-other_birds">0</span> Pigeons & Birds</div>
-    <div class="kill-item"><span id="akc-buffalo">0</span> Buffaloes</div>
-    <div class="kill-item"><span id="akc-horses">0</span> Horses</div>
-    <div class="kill-item"><span id="akc-donkeys">0</span> Donkeys</div>
-  </div>
-
-  <div class="sources-container">
-    <h3>Sources:</h3>
-    <ul>
-      <li><a href="https://considerveganism.com/counter/" target="_blank">Animal Kill Counter</a></li>
-    </ul>
-  </div>  
-
-  <section id="lifestyle-calculator">
-    <h2>Calculate Your Saves on a Vegan Lifestyle</h2>
-    <p id="lifestyle-description">
-      Adopting a vegan or vegetarian lifestyle not only conserves vital resources like water, grain, and land but also drastically reduces CO₂ emissions and spares countless animals from harm. Explore the impact you can have by choosing a compassionate diet.
-    </p>
-  
-    <!-- Main Container for Left and Right Sections -->
-    <div id="main-container">
-      <!-- Left Section -->
-      <div id="left-section">
-        <div class="toggle-buttons">
-          <button id="vegan" class="active">Vegan</button>
-          <button id="vegetarian">Vegetarian</button>
-        </div>
-        <div class="input-section">
-          <div class="input-item">
-            <label for="days"><strong>Days</strong></label>
+      <div id="main-container">
+        <div id="left-section">
+          <div class="toggle-buttons">
+            <button id="vegan" class="active">Vegan</button>
+            <button id="vegetarian">Vegetarian</button>
+          </div>
+          <div class="input-section">
+            <label for="days">Days</label>
             <input type="number" id="days" min="0" value="0">
-          </div>
-          <div class="input-item">
-            <label for="months"><strong>Months</strong></label>
+            <label for="months">Months</label>
             <input type="number" id="months" min="0" value="0">
-          </div>
-          <div class="input-item">
-            <label for="years"><strong>Years</strong></label>
+            <label for="years">Years</label>
             <input type="number" id="years" min="0" value="0">
           </div>
         </div>
-      </div>
-  
-      <!-- Right Section -->
-      <div id="right-section">
-        <div class="unit-toggle">
-          <button id="calc-metric" class="active">Metric</button>
-          <button id="calc-imperial">Imperial</button>
-        </div>
-        <div class="output-stats">
-          <div class="output-item">
-            <span id="saves-animals" class="stat-box">1.0 Animal Lives</span>
+        <div id="right-section">
+          <div class="unit-toggle">
+            <button id="calc-metric" class="active">Metric</button>
+            <button id="calc-imperial">Imperial</button>
           </div>
-          <div class="output-item">
-            <span id="saves-water" class="stat-box">0.0 Gallons of Water</span>
-          </div>
-          <div class="output-item">
-            <span id="saves-grain" class="stat-box">0.0 lbs of Grain</span>
-          </div>
-          <div class="output-item">
-            <span id="saves-land" class="stat-box">0.0 ft² of Forested Land</span>
-          </div>
-          <div class="output-item">
-            <span id="saves-co2" class="stat-box">0.0 lbs of CO₂</span>
+          <div class="output-stats">
+            <div id="saves-animals">0 Animal Lives</div>
+            <div id="saves-water">0 Liters of Water</div>
+            <div id="saves-grain">0 kg of Grain</div>
+            <div id="saves-land">0 m² of Forested Land</div>
+            <div id="saves-co2">0 kg of CO₂</div>
           </div>
         </div>
       </div>
-    </div>
-  </section>  
-  <div class="sources-container">
-    <h3>Sources:</h3>
-    <ul>
-      <li><a href="https://vegancalculator.app/" target="_blank">Vegan Calculator</a></li>
-    </ul>
-  </div>  
-
+    </section>
   </main>
 
   <script type="module" src="index.js"></script>
