@@ -14,15 +14,14 @@ header h1 {
   margin: 20px 0 20px;
 }
 
-/* Description under the title */
 #impact-description {
   margin: 20px auto;
-  padding: 0 20px; /* Add padding on left and right */
-  max-width: 1200px; /* Limit the text width for readability */
-  font-size: 1.2rem; /* Slightly larger than regular text */
-  line-height: 1.6; /* Add spacing between lines for better readability */
-  text-align: center; /* Center-align the text */
-  color: #333; /* Dark gray for better contrast */
+  padding: 0 20px; 
+  max-width: 1200px; 
+  font-size: 1.2rem; 
+  line-height: 1.6; 
+  text-align: center; 
+  color: #333; 
 }
 
 #unit-toggle {
@@ -44,22 +43,20 @@ header h1 {
   color: white;
 }
 
-/* Main Container */
 #container {
   display: flex;
   justify-content: space-between;
   padding: 20px;
 }
 
-/* Animal Selector */
 #animal-list {
   flex: 1;
 }
 
 #animal-list h2 {
   text-align: center;
-  margin-top: 1px; /* Decrease space above */
-  margin-bottom: 20px; /* Add space below */
+  margin-top: 1px; 
+  margin-bottom: 20px; 
   font-size: 1.5rem;
 }
 
@@ -83,7 +80,6 @@ header h1 {
   transform: scale(1.1);
 }
 
-/* Animal Details */
 #animal-details {
   flex: 1;
 }
@@ -91,8 +87,8 @@ header h1 {
 #animal-details h2 {
   text-align: center;
   font-size: 1.5rem;
-  margin-top: 1px; /* Decrease space above */
-  margin-bottom: 20px; /* Add space below */
+  margin-top: 1px; 
+  margin-bottom: 20px; 
 }
 
 #stats {
@@ -126,13 +122,11 @@ header h1 {
   font-size: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
-  /* Flexbox to center vertically */
   display: flex;
-  align-items: center; /* Vertically centers the content */
-  justify-content: flex-start; /* Ensures the text is aligned to the left */
+  align-items: center; 
+  justify-content: flex-start; 
 }
 
-/* Kill Counter Section */
 #kill-counter {
   text-align: center;
   margin: 50px auto;
@@ -145,7 +139,6 @@ header h1 {
   color: #000;
 }
 
-/* Kill Counter Grid */
 .kill-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -170,49 +163,47 @@ header h1 {
   margin-bottom: 10px;
 }
 
-/* Sources Section */
 .sources-container {
-  display: flex; /* Use flexbox to align items on the same line */
-  align-items: center; /* Vertically align text */
-  justify-content: center; /* Center the content horizontally */
-  gap: 10px; /* Add spacing between "Sources" and the link */
-  margin-top: 20px; /* Add spacing from the section above */
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 10px; 
+  margin-top: 20px; 
   margin-bottom: 70px; 
 }
 
 .sources-container h3 {
-  margin: 0; /* Remove extra margin from the heading */
-  font-size: 1.1rem; /* Match the paragraph font size */
-  color: #555; /* Subtle gray */
+  margin: 0; 
+  font-size: 1.1rem; 
+  color: #555; 
 }
 
 .sources-container ul {
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove padding */
-  list-style-type: none; /* Remove bullets */
+  margin: 0; 
+  padding: 0;
+  list-style-type: none; 
 }
 
 .sources-container ul li {
-  display: inline; /* Align link inline with heading */
+  display: inline; 
 }
 
 .sources-container ul li a {
-  text-decoration: none; /* Remove underline */
-  color: #0077cc; /* Blue link color */
+  text-decoration: none; 
+  color: #0077cc; 
 }
 
 .sources-container ul li a:hover {
-  text-decoration: underline; /* Add underline on hover */
+  text-decoration: underline; 
 }
 
 #time-counter {
   text-align: center;
   margin: 20px auto;
-  font-size: 1.2rem; /* Match the font size of the paragraph */
-  color: #333; /* Same color as the paragraph */
+  font-size: 1.2rem; 
+  color: #333; 
 }
 
-/* General Styling */
 #lifestyle-description {
   margin: 20px auto;
   padding: 0 20px;
@@ -223,7 +214,6 @@ header h1 {
   color: #333;
 }
 
-/* Calculator Controls */
 #main-container {
   display: flex;
   justify-content: space-between;
@@ -241,7 +231,6 @@ header h1 {
   gap: 20px;
 }
 
-/* Vegan/Vegetarian and Metric/Imperial Buttons */
 .toggle-buttons,
 .unit-toggle {
   display: flex;
@@ -264,7 +253,6 @@ button.active {
   color: white;
 }
 
-/* Input Section */
 .input-section {
   display: flex;
   flex-direction: column;
@@ -299,7 +287,6 @@ input {
   text-align: center;
 }
 
-/* Output Section */
 .output-stats {
   display: flex;
   flex-direction: column;
@@ -317,7 +304,6 @@ input {
   background-color: #ffffff;
 }
 
-/* Additional Styling for Responsiveness */
 @media screen and (max-width: 768px) {
   #main-container {
     flex-direction: column;
@@ -337,33 +323,32 @@ input {
   }
 }
 
-/* Sources Container Styling */
 .sources-container-simple {
-  padding: 0 20px; /* Add horizontal padding to move the sources away from screen borders */
-  margin: 20px auto; /* Center-align the sources container and add spacing above and below */
-  max-width: 800px; /* Restrict the maximum width to align with content */
-  text-align: left; /* Ensure text is aligned to the left */
+  padding: 0 20px; 
+  margin: 20px auto; 
+  max-width: 800px; 
+  text-align: left; 
 }
 
 .sources-container-simple h3 {
-  display: inline; /* Keep "Sources:" inline with the sources text */
+  display: inline; 
   font-size: 1.2rem;
   color: #333;
-  margin-right: 5px; /* Add space between "Sources:" and the sources list */
+  margin-right: 5px; 
 }
 
 .sources-container-simple p {
-  display: inline; /* Keep sources text inline */
+  display: inline; 
   font-size: 1rem;
   color: #555;
-  line-height: 1.6; /* Improve readability */
+  line-height: 1.6; 
 }
 
 .sources-container-simple a {
   text-decoration: none;
-  color: #0077cc; /* Standard blue link color */
+  color: #0077cc; 
 }
 
 .sources-container-simple a:hover {
-  text-decoration: underline; /* Underline links on hover */
+  text-decoration: underline; 
 }
